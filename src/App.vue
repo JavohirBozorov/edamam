@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <div class="spinner">
+      <!-- <SpinnerComponent /> -->
+    </div>
+    <MealList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import MealList from "./components/MealList.vue";
+// import SpinnerComponent from "./components/SpinnerComponent.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    MealList,
+    // SpinnerComponent,
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+template,
+html,
+h1,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: #0d0d0d;
+  padding-top: 1rem;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+#app {
+  background-color: #fef9f8;
+  min-height: 100vh;
+}
+.spinner {
+  position: relative;
+  align-items: center;
+  z-index: 5;
 }
 </style>
